@@ -1,0 +1,75 @@
+/* Sobrescribimos variables de Bulma con nuestro dark theme */
+:root {
+  --bg-dark: #121212; /* fondo principal */
+  --bg-card: #1e1e1e; /* fondo de tarjetas */
+  --text-main: #f5f5f5; /* texto principal */
+  --text-muted: #b0b0b0; /* texto secundario */
+  --primary-color: hsl(212, 72%, 59%); /* azul principal */
+  --success-color: #27ae60; /* verde */
+  --bar-background: #2b824f;
+  --warning-color: #f39c12; /* amarillo */
+  --danger-color: #e74c3c; /* rojo */
+}
+
+/* Fondo general */
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--bg-card) !important;
+  border-bottom: 2px solid var(--primary-color);
+}
+.navbar .navbar-item,
+.navbar .navbar-brand a {
+  color: var(--text-main) !important;
+}
+
+/* Caja y tarjetas */
+.box,
+.card {
+  background-color: var(--bg-card);
+  color: var(--text-main);
+}
+
+/* Títulos */
+.title,
+.subtitle,
+.card-header-title {
+  color: var(--text-main);
+}
+
+/* Texto más tenue */
+.content,
+p,
+span {
+  color: var(--text-muted);
+}
+
+/* Progreso */
+.progress.is-success {
+  --bulma-progress-bar-background-color: var(--bar-background);
+}
+
+/* Tags (ajustando contraste) */
+.tag.is-info {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.tag.is-success {
+  background-color: var(--success-color);
+  color: #fff;
+}
+
+.tag.is-warning {
+  background-color: var(--warning-color);
+  color: #fff;
+}
+
+.tag.is-danger {
+  background-color: var(--danger-color);
+  color: #fff;
+}

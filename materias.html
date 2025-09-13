@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Materias</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar is-primary">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="index.html">MiCarrera</a>
+      </div>
+    </nav>
+
+    <!-- LISTADO DE MATERIAS -->
+    <section class="section">
+      <div class="container">
+        <h2 class="title">Plan Académico</h2>
+
+        <!-- RESUMEN DEL PROGRESO -->
+        <div class="box">
+          <div class="is-flex-direction-row heading-progress">
+            <p class="heading">Progreso</p>
+            <p id="percentage-progress">0%</p>
+          </div>
+
+          <progress class="progress is-success" value="0" max="100">
+            0%
+          </progress>
+          <p id="progress-text">0 / 0 materias aprobadas</p>
+        </div>
+
+        <!-- AÑO 1 -->
+        <h3 class="subtitle">Primer Año</h3>
+        <div class="columns is-multiline">
+          <div class="column is-one-quarter">
+            <div class="card">
+              <header class="card-header">
+                <p class="card-header-title">Matemática I</p>
+              </header>
+              <div class="card-content">
+                <div class="content">
+                  Estado: <span class="tag is-info">Pendiente</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column is-one-quarter">
+            <div class="card">
+              <header class="card-header">
+                <p class="card-header-title">Algoritmos</p>
+              </header>
+              <div class="card-content">
+                <div class="content">
+                  Estado: <span class="tag is-success">Aprobada</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Más materias... -->
+        </div>
+      </div>
+      <div class="p-4 issue-section">
+        <p>
+          ¿Hay algun error en el plan?
+          <a href="form-issue.html">Sugerí un cambio acá.</a>
+        </p>
+      </div>
+    </section>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
