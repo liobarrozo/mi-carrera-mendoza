@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | MiCarrera</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"
+    />
+  </head>
+  <body>
+    <section class="section">
+      <div class="container">
+        <h1 class="title">MiCarrera</h1>
+
+        <!-- Login -->
+        <form id="loginForm" class="box">
+          <h2 class="subtitle">Iniciar sesión</h2>
+          <div class="field">
+            <input
+              class="input"
+              type="email"
+              id="email"
+              placeholder="Email"
+              required
+            />
+          </div>
+          <div class="field">
+            <input
+              class="input"
+              type="password"
+              id="password"
+              placeholder="Contraseña"
+              required
+            />
+          </div>
+          <button class="button is-primary" type="submit">Ingresar</button>
+        </form>
+
+        <hr />
+
+        <!-- Registro -->
+        <form id="registerForm" class="box">
+          <h2 class="subtitle">Registrarse</h2>
+          <div class="field">
+            <input
+              class="input"
+              type="email"
+              id="regEmail"
+              placeholder="Email"
+              required
+            />
+          </div>
+          <div class="field">
+            <input
+              class="input"
+              type="password"
+              id="regPassword"
+              placeholder="Contraseña"
+              required
+            />
+          </div>
+          <button class="button is-link" type="submit">Crear cuenta</button>
+        </form>
+      </div>
+    </section>
+
+    <script type="module" src="js/index.js"></script>
+  </body>
+</html>

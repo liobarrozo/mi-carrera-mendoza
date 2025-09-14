@@ -1,0 +1,87 @@
+html.light {
+  --bg-dark: #f5f5f5; /* fondo principal */
+  --bg-card: #ffffff; /* fondo de tarjetas */
+  --text-main: #1e1e1e; /* texto principal */
+  --text-muted: #555555; /* texto secundario */
+  --primary-color: hsl(212, 72%, 59%);
+  --success-color: #27ae60;
+  --bar-background: #27ae60;
+  --warning-color: #f39c12;
+  --danger-color: #e74c3c;
+}
+
+html.dark {
+  --bg-dark: #121212;
+  --bg-card: #1e1e1e;
+  --text-main: #f5f5f5;
+  --text-muted: #b0b0b0;
+  --primary-color: hsl(212, 72%, 59%);
+  --success-color: #27ae60;
+  --bar-background: #2b824f;
+  --warning-color: #f39c12;
+  --danger-color: #e74c3c;
+}
+
+body {
+  background-color: var(--bg-dark) !important;
+  color: var(--text-main) !important;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--bg-card) !important;
+  border-bottom: 2px solid var(--primary-color) !important;
+}
+.navbar .navbar-item,
+.navbar .navbar-brand a {
+  color: var(--text-main) !important;
+}
+
+/* Caja y tarjetas */
+.box,
+.card {
+  background-color: var(--bg-card) !important;
+  color: var(--text-main) !important;
+}
+
+/* Títulos */
+.title,
+.subtitle,
+.card-header-title {
+  color: var(--text-main) !important;
+}
+
+/* Texto más tenue */
+.content,
+.carrera-text,
+p,
+span {
+  color: var(--text-muted) !important;
+}
+
+/* Progreso */
+.progress.is-success {
+  --bulma-progress-bar-background-color: var(--bar-background) !important;
+}
+
+/* Tags */
+.tag.is-info {
+  background-color: var(--primary-color) !important;
+  color: #fff !important;
+}
+
+.tag.is-success {
+  background-color: var(--success-color) !important;
+  color: #fff !important;
+}
+
+.tag.is-warning {
+  background-color: var(--warning-color) !important;
+  color: #fff !important;
+}
+
+.tag.is-danger {
+  background-color: var(--danger-color) !important;
+  color: #fff !important;
+}

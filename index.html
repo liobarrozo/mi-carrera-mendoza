@@ -8,7 +8,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css"
     />
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="./public/css/main.css" />
   </head>
   <body>
     <!-- NAVBAR -->
@@ -21,18 +21,33 @@
     <!-- PANEL PRINCIPAL -->
     <section class="section">
       <div class="container">
-        <h1 class="title">Hola Angi 👋</h1>
+        <!-- SALUDO DINÁMICO -->
+        <h1 class="title" id="saludo">Hola 👋</h1>
         <p class="subtitle">
-          Carrera en curso: <strong>Profesorado en Educación Inicial</strong>
+          Carrera en curso:
+          <strong class="carrera-text" id="carrera"
+            >Profesorado en Educación Inicial</strong
+          >
         </p>
 
         <!-- PROGRESO -->
-        <div class="box">
+        <div class="box has-text-centered">
           <p class="heading">Progreso</p>
-          <progress class="progress is-success" value="30" max="100">
-            30%
+          <p class="title is-3" id="progress-text">0%</p>
+          <progress
+            class="progress is-success"
+            value="0"
+            max="100"
+            id="progress-bar"
+          >
+            0%
           </progress>
-          <p>12 / 42 materias aprobadas</p>
+          <p id="materias-text">0 / 42 materias aprobadas</p>
+        </div>
+
+        <!-- RESUMEN POR AÑO -->
+        <div class="columns is-multiline mt-5" id="resumen-anos">
+          <!-- Mini tarjetas por año se generarán desde JS -->
         </div>
 
         <!-- ACCESO A PLAN -->
@@ -43,5 +58,7 @@
         </div>
       </div>
     </section>
+
+    <script src="public/js/main.js"></script>
   </body>
 </html>

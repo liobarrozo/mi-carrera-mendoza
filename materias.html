@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Materias</title>
+    <title>Materias de mi plan</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css"
     />
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="./public/css/main.css" />
   </head>
   <body>
     <!-- NAVBAR -->
@@ -23,6 +23,22 @@
       <div class="container">
         <h2 class="title">Plan Académico</h2>
 
+        <!-- FILTRO POR AÑO -->
+        <div class="field">
+          <label class="subtitle">Filtrar por Año:</label>
+          <div class="control">
+            <div class="select">
+              <select id="filtro-ano">
+                <option value="todos">Todos los años</option>
+                <option value="Primer Año">Primer Año</option>
+                <option value="Segundo Año">Segundo Año</option>
+                <option value="Tercer Año">Tercer Año</option>
+                <option value="Cuarto Año">Cuarto Año</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
         <!-- RESUMEN DEL PROGRESO -->
         <div class="box">
           <div class="is-flex-direction-row heading-progress">
@@ -34,48 +50,18 @@
             0%
           </progress>
           <p id="progress-text">0 / 0 materias aprobadas</p>
+          <p id="pending-text">0 pendientes</p>
         </div>
 
-        <!-- AÑO 1 -->
-        <h3 class="subtitle">Primer Año</h3>
-        <div class="columns is-multiline">
-          <div class="column is-one-quarter">
-            <div class="card">
-              <header class="card-header">
-                <p class="card-header-title">Matemática I</p>
-              </header>
-              <div class="card-content">
-                <div class="content">
-                  Estado: <span class="tag is-info">Pendiente</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="column is-one-quarter">
-            <div class="card">
-              <header class="card-header">
-                <p class="card-header-title">Algoritmos</p>
-              </header>
-              <div class="card-content">
-                <div class="content">
-                  Estado: <span class="tag is-success">Aprobada</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Más materias... -->
-        </div>
+        <!-- CONTENEDOR DE MATERIAS -->
+        <div class="columns is-multiline" id="materias-container"></div>
       </div>
+
+      <!-- SECCIÓN PARA REPORTAR ERRORES -->
       <div class="p-4 issue-section">
-        <p>
-          ¿Hay algun error en el plan?
-          <a href="form-issue.html">Sugerí un cambio acá.</a>
-        </p>
+        <p></p>
       </div>
     </section>
-
-    <script src="js/main.js"></script>
+    <script src="./public/js/main.js"></script>
   </body>
 </html>
